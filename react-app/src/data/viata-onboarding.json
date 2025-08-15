@@ -1,0 +1,75 @@
+{
+    "id": "viata-onboarding",
+    "title": "Increasing User Retention Through a Smarter Onboarding Experience",
+    "subtitle": "Updating Viata's onboarding form to support customization and reduce drop-off",
+    "tags": "UX / Research / Web Design",
+    "img": "img/ViataOnboardingCover-Purple.png",
+    "infoTable": [
+        {"label": "Position", "value": "UX Design Internship at Viata"},
+        {"label": "Sector", "value": "Startup, Event Planning, Travel Tech"},
+        {"label": "My Role", "value": "Research, Wireframing, Interface Design, Development"},
+        {"label": "Project Duration", "value": "4 weeks (May 2025)"}
+    ],
+    "sections": [
+        {
+            "sectionTitle": "Background",
+            "subSections": [
+                {
+                    "subtitle": "Product",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Viata is a Seattle-based travel tech startup that helps event organizers create custom, interactive event maps for their attendees. These maps showcase venues, hotels, local attractions, and points of interest — making it easier for attendees to navigate and explore the event area."
+                        }
+                    ]
+                },
+                {
+                    "subtitle": "Challenge",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "My primary task was to redesign one of Viata's onboarding form, used by event organizers to input essential event details. This form powers the back end of the map-building process."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The redesign brief was loosely defined — “improve usability and aesthetics” — leaving the core problem framing up to me. I had to identify usability issues, propose improvements, and ensure the new design aligned with the product's evolving visual direction."
+                        }
+                    ]
+                }, 
+                {
+                    "subtitle": "Constraints",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "As with many early-stage startup projects, several real-world limitations shaped the approach:"
+                        },
+                        {
+                            "type": "bulletedList",
+                            "bullets": ["Tight Timelines: The onboarding redesign was part of a larger product release, meaning timelines were tight and scope had to remain focused", 
+                            "Startup Realities: With limited team size, budget, and access to users, research and testing had to be creative and scrappy.", 
+                            "No Design Mentor / First UX Role: This was my first professional design experience, and I navigated the process independently —  framing the problem, conducting research, iterating designs, and making strategic decisions as I went"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "sectionTitle": "Research & Ideation"
+        },
+        {
+            "sectionTitle": "Wireframes"
+        },
+        {
+            "sectionTitle": "Prototypes"
+        },
+        {
+            "sectionTitle": "Feedback & Iteration"
+        },
+        {
+            "sectionTitle": "Final Solution"
+        },
+        {
+            "sectionTitle": "Conclusion"
+        }
+    ]
+}

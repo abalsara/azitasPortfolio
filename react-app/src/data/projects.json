@@ -1,0 +1,16 @@
+[
+  {
+    "id": "viata-onboarding",
+    "title": "Increasing User Retention Through a Smarter Onboarding Experience",
+    "subtitle": "Updating Viata's onboarding form to support customization and reduce drop-off",
+    "tags": "UX / RESEARCH / WEB DESIGN",
+    "img": "img/ViataOnboardingCover-Purple.png"
+  },
+  {
+    "id": "viata-hotel-cards",
+    "title": "Increasing Hotel Bookings by Building Trust",
+    "subtitle": "Redesigning hotel cards to boost user confidence and improve click-through rates",
+    "tags": "UX / PRODUCT DESIGN",
+    "img": "img/ViataHotelCardCover2.png"
+  }
+]
