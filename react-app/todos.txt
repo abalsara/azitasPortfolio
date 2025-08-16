@@ -1,7 +1,9 @@
-ASAP
-- use consistent naming (change everything to either Projects, or Case Studies)
-- integrate onboarding data into the react component
-
-LATER
-- setup firebase hosting for this app
+- setup firebase hosting for this app (AT HOME) 
+    - npm run build
+    - firebase deploy
 - take down gh-pages hosting for my html mockup
+- design footer (Linkedin, Email, )
+- use consistent naming (change everything to either Projects, or Case Studies)
+- add accessibility to website 
+    - add alt text to images
+- add content to gallery page

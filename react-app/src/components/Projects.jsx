@@ -12,18 +12,15 @@ export function ProjectsSection(props) {
   );
 }
 
-function ProjectCard({ title, subtitle, tags, img }) {
+function ProjectCard({ id, title, subtitle, tags, img }) {
   return (
     <div className="card project-card">
-      <img src={img} className="project-img" alt="Workshop sticky notes" />
+      <img src={img} className="project-img" />
       <div className="card-body p-4 project-content">
         <div className="project-tags">{tags}</div>
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{subtitle}</p>
-        <a
-          href="viata-onboarding-form-redesign.html"
-          className="btn btn-case-study"
-        >
+        <a href={`case-study/${id}`} className="btn btn-case-study">
           View Case Study
         </a>
       </div>

@@ -5,17 +5,14 @@ export function Header(props) {
         <div className="row align-items-center">
           <div className="col-6">
             <div>
-              <a className="wordmark" href="index.html">
+              <a className="wordmark" href="/">
                 <div className="wordmark-name">Azita Balsara</div>
                 <div className="wordmark-title">UX/UI Designer</div>
               </a>
             </div>
           </div>
           <div className="col-6 text-end">
-            <a
-              href="index.html"
-              className="nav-link d-inline me-3 header-small"
-            >
+            <a href="/" className="nav-link d-inline me-3 header-small">
               Work
             </a>
             <a
@@ -25,11 +22,7 @@ export function Header(props) {
             >
               Resume
             </a>
-            <a
-              href="gallery.html"
-              className="nav-link d-inline me-3 header-small"
-              target="_blank"
-            >
+            <a href="/gallery" className="nav-link d-inline me-3 header-small">
               Gallery
             </a>
             <a

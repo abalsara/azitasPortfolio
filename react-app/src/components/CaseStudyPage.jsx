@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import { Header } from "./Header.jsx";
 import { Footer } from "./Footer.jsx";
-
-// useEffect(() => {
-//   import(`../data/caseStudies/${id}.json`)
-//     .then((module) => setData(module.default))
-//     .catch((err) => console.error("Error loading JSON:", err));
-// }, [id]);
 
 export function CaseStudyPage(props) {
   const [projectData, setProjectData] = useState(null);
 
+  const { id } = useParams();
+
   useEffect(() => {
-    import(`../data/viata-onboarding.json`)
+    import(`../data/${id}.json`)
       .then((module) => setProjectData(module.default))
       .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
+  }, [id]);
 
   if (!projectData) {
     return <div>Loading...</div>;
@@ -41,11 +38,7 @@ export function CaseStudyPage(props) {
 function CaseStudyBanner({ title, subtitle, img }) {
   return (
     <section className="case-study-banner">
-      <img
-        className="case-study-banner-image"
-        src={img}
-        alt="Viata Onboarding Form Redesign"
-      />
+      <img className="case-study-banner-image" src={img} />
       <div className="case-study-banner-text">
         <h1 className="case-study-title">{title}</h1>
         <div className="case-study-subtitle">{subtitle}</div>
@@ -119,6 +112,9 @@ function ContentRenderer({ content }) {
       case "bulletedList":
         return <BulletedList key={index} bullets={item.bullets} />;
 
+      case "imageCarousel":
+        return <ImageCarousel key={index} imgUrls={item.imgUrls} />;
+
       default:
         return <div>ERR: failed to render content of type: {item.type}</div>;
     }
@@ -138,100 +134,57 @@ function BulletedList({ bullets }) {
   const listItems = bullets.map((bullet, index) => (
     <li key={index}>{bullet}</li>
   ));
-  return <ul>{listItems}</ul>;
+  return (
+    <div>
+      <ul>{listItems}</ul>
+      <br />
+    </div>
+  );
 }
 
-// function ImageCarousel() {
-//   return (
-//     <div className="container mt-5">
-//       <div
-//         id="customCarousel"
-//         className="carousel slide"
-//         data-bs-ride="carousel"
-//       >
-//         <div className="carousel-inner">
-//           <div className="carousel-item active">
-//             <img
-//               src="img/OldForm1.png"
-//               className="d-block w-100"
-//               alt="Slide 1"
-//             />
-//           </div>
-//           <div className="carousel-item">
-//             <img
-//               src="img/OldForm2.png"
-//               className="d-block w-100"
-//               alt="Slide 2"
-//             />
-//           </div>
-//           <div className="carousel-item">
-//             <img
-//               src="img/OldForm3.png"
-//               className="d-block w-100"
-//               alt="Slide 3"
-//             />
-//           </div>
-//           <div className="carousel-item">
-//             <img
-//               src="img/OldForm4.png"
-//               className="d-block w-100"
-//               alt="Slide 4"
-//             />
-//           </div>
-//           <div className="carousel-item">
-//             <img
-//               src="img/OldForm5.png"
-//               className="d-block w-100"
-//               alt="Slide 5"
-//             />
-//           </div>
-//         </div>
+function ImageCarousel({ imgUrls }) {
+  const carouselImages = CarouselImages({ imgUrls });
+  let carouselButtons = CarouselButtons({ count: imgUrls.length });
 
-//         <div className="carousel-indicators mt-3">
-//           <button
-//             type="button"
-//             data-bs-target="#customCarousel"
-//             data-bs-slide-to="0"
-//             className="active"
-//             aria-current="true"
-//             aria-label="Slide 1"
-//           >
-//             1
-//           </button>
-//           <button
-//             type="button"
-//             data-bs-target="#customCarousel"
-//             data-bs-slide-to="1"
-//             aria-label="Slide 2"
-//           >
-//             2
-//           </button>
-//           <button
-//             type="button"
-//             data-bs-target="#customCarousel"
-//             data-bs-slide-to="2"
-//             aria-label="Slide 3"
-//           >
-//             3
-//           </button>
-//           <button
-//             type="button"
-//             data-bs-target="#customCarousel"
-//             data-bs-slide-to="3"
-//             aria-label="Slide 4"
-//           >
-//             4
-//           </button>
-//           <button
-//             type="button"
-//             data-bs-target="#customCarousel"
-//             data-bs-slide-to="4"
-//             aria-label="Slide 5"
-//           >
-//             5
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div className="container mt-5">
+      <div
+        id="customCarousel"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        {carouselImages}
+        {carouselButtons}
+      </div>
+    </div>
+  );
+}
+
+const CarouselImages = ({ imgUrls }) => {
+  const carouselImages = imgUrls.map((url, index) => (
+    <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
+      <img src={url} className="d-block w-100" alt={`Slide ${index}`} />
+    </div>
+  ));
+  return <div className="carousel-inner">{carouselImages}</div>;
+};
+
+const CarouselButtons = ({ count }) => {
+  return (
+    <div className="carousel-indicators mt-3">
+      {Array.from({ length: count }, (_, i) => (
+        <button
+          key={i}
+          type="button"
+          data-bs-target="#customCarousel"
+          data-bs-slide-to={i}
+          className={i === 0 ? "active" : ""}
+          aria-current={i === 0 ? "true" : undefined}
+          aria-label={`Slide ${i + 1}`}
+        >
+          {i + 1}
+        </button>
+      ))}
+    </div>
+  );
+};

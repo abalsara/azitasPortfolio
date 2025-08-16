@@ -5,7 +5,7 @@ export function HeroSection(props) {
         <div className="row align-items-center">
           <div className="col-lg-3 col-md-4 col-12 mb-4 mb-md-0">
             <img
-              src="img/ProfilePic.jpg"
+              src="/img/ProfilePic.jpg"
               alt="Profile"
               className="profile-img"
             />
