@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import ReactMarkdown from "react-markdown";
+import { motion } from "framer-motion";
 import { Header } from "./Header.jsx";
-import { Footer } from "./Footer.jsx";
+import { CallToAction, Footer } from "./Footer.jsx";
 
 export function CaseStudyPage(props) {
   const [projectData, setProjectData] = useState(null);
@@ -19,7 +21,7 @@ export function CaseStudyPage(props) {
   }
 
   return (
-    <div>
+    <div className="case-study-page">
       <Header />
       <main>
         <CaseStudyBanner
@@ -30,6 +32,7 @@ export function CaseStudyPage(props) {
         <CaseStudyInfoTable infoTable={projectData.infoTable} />
         <CaseStudyContent sections={projectData.sections} />
       </main>
+      <CallToAction />
       <Footer />
     </div>
   );
@@ -51,7 +54,9 @@ function CaseStudyInfoTable({ infoTable }) {
   const infoTableXML = infoTable.map((row, index) => (
     <tr key={index}>
       <td className="label">{row.label}</td>
-      <td className="value">{row.value}</td>
+      <td className="value">
+        <ReactMarkdown>{row.value}</ReactMarkdown>
+      </td>
     </tr>
   ));
 
@@ -103,8 +108,9 @@ function CaseStudySubsection({ subtitle, content }) {
 
 function ContentRenderer({ content }) {
   if (!content) return null;
+  const contentArray = Array.isArray(content) ? content : [content];
 
-  return content.map((item, index) => {
+  return contentArray.map((item, index) => {
     switch (item.type) {
       case "paragraph":
         return <Paragraph key={index} text={item.text} />;
@@ -115,24 +121,30 @@ function ContentRenderer({ content }) {
       case "imageCarousel":
         return <ImageCarousel key={index} imgUrls={item.imgUrls} />;
 
+      case "cardList":
+        return <CardList key={index} cards={item.cards} />;
+
       default:
-        return <div>ERR: failed to render content of type: {item.type}</div>;
+        return (
+          <div>
+            <strong>
+              Error: failed to render content of type: {item.type}
+            </strong>
+          </div>
+        );
     }
   });
 }
 
 function Paragraph({ text }) {
-  return (
-    <div>
-      <div>{text}</div>
-      <br />
-    </div>
-  );
+  return <ReactMarkdown>{text}</ReactMarkdown>;
 }
 
 function BulletedList({ bullets }) {
   const listItems = bullets.map((bullet, index) => (
-    <li key={index}>{bullet}</li>
+    <li key={index}>
+      <ReactMarkdown>{bullet}</ReactMarkdown>
+    </li>
   ));
   return (
     <div>
@@ -143,16 +155,16 @@ function BulletedList({ bullets }) {
 }
 
 function ImageCarousel({ imgUrls }) {
+  const carouselId = `carousel-${Math.random().toString(36)}`;
   const carouselImages = CarouselImages({ imgUrls });
-  let carouselButtons = CarouselButtons({ count: imgUrls.length });
+  let carouselButtons = CarouselButtons({
+    count: imgUrls.length,
+    carouselId: carouselId,
+  });
 
   return (
-    <div className="container mt-5">
-      <div
-        id="customCarousel"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
+    <div className="breakout-wrapper">
+      <div id={carouselId} className="carousel">
         {carouselImages}
         {carouselButtons}
       </div>
@@ -169,14 +181,14 @@ const CarouselImages = ({ imgUrls }) => {
   return <div className="carousel-inner">{carouselImages}</div>;
 };
 
-const CarouselButtons = ({ count }) => {
+const CarouselButtons = ({ count, carouselId }) => {
   return (
     <div className="carousel-indicators mt-3">
       {Array.from({ length: count }, (_, i) => (
         <button
           key={i}
           type="button"
-          data-bs-target="#customCarousel"
+          data-bs-target={`#${carouselId}`}
           data-bs-slide-to={i}
           className={i === 0 ? "active" : ""}
           aria-current={i === 0 ? "true" : undefined}
@@ -188,3 +200,28 @@ const CarouselButtons = ({ count }) => {
     </div>
   );
 };
+
+function CardList({ cards = [] }) {
+  return (
+    <div className="card-list">
+      {cards.map((card, index) => (
+        <motion.div
+          key={index}
+          className="card-list-item"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: index * 0.2 }}
+        >
+          {card.label && <div className="card-list-label">{card.label}</div>}
+          <h3 className="card-list-title">
+            <ReactMarkdown>{card.title}</ReactMarkdown>
+          </h3>
+          <div className="card-list-body">
+            <ReactMarkdown>{card.body}</ReactMarkdown>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}

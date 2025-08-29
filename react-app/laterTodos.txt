@@ -1,0 +1,14 @@
+CODING:
+- fix case study spacing (all in css file, not in the xml)
+    - spacing in infoTable
+    - spacing between sections / subsections
+- use consistent naming (change everything to either Projects, or Case Studies)
+- add accessibility to website 
+    - add alt text to images
+- fix responsive design for mobile size
+- remove image annotation carousel
+
+DESIGN:
+- redesign call to action component
+- design gallery page
+- add interesting design to case studies 

@@ -3,15 +3,18 @@
   "title": "Increasing Hotel Bookings by Building Trust",
   "subtitle": "Redesigning hotel cards to boost user confidence and improve click-through rates",
   "tags": "UX / PRODUCT DESIGN",
-  "img": "/img/ViataHotelCardCover.png",
+  "img": "/img/HotelCard-CaseStudyCover.png",
   "infoTable": [
-    { "label": "Position", "value": "UX Design Internship at Viata" },
+    {
+      "label": "Position",
+      "value": "UX Design Internship at [Viata](https://viata.ai/)"
+    },
     { "label": "Sector", "value": "Startup, Event Planning, Travel Tech" },
     {
       "label": "My Role",
-      "value": "todo"
+      "value": "Research, Wireframing, Prototyping, Development"
     },
-    { "label": "Project Duration", "value": "todo" }
+    { "label": "Project Duration", "value": "3 weeks (April 2025)" }
   ],
   "sections": [
     {

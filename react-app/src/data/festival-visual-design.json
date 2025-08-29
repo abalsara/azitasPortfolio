@@ -1,38 +1,31 @@
 {
   "id": "festival-visual-design",
-  "title": "todo",
-  "subtitle": "todo",
-  "tags": "BRANDING / GRAPHIC DESIGN",
-  "img": "",
+  "title": "Enhancing Festival Engagement Through a Cohesive Visual System",
+  "subtitle": "Designing signage, maps, posters, and digital touchpoints to improve navigation, clarity, and attendee experience",
+  "tags": "BRANDING / VISUAL DESIGN",
+  "img": "/img/Festival-CaseStudyCover.png",
   "infoTable": [
-    { "label": "todo", "value": "todo" },
     {
-      "label": "My Role",
-      "value": "todo"
+      "label": "Project Type",
+      "value": "School Project at University of Washington"
     },
-    { "label": "Project Duration", "value": "todo" }
+    {
+      "label": "Course",
+      "value": "HCDE 308 - Visual Communication Design"
+    },
+    {
+      "label": "Key Deliverables",
+      "value": "todo."
+    },
+    {
+      "label": "Project Duration",
+      "value": "10 weeks (Jan - Mar 2025)"
+    }
   ],
   "sections": [
     {
-      "sectionTitle": "Background"
-    },
-    {
-      "sectionTitle": "Research & Ideation"
-    },
-    {
-      "sectionTitle": "Wireframes"
-    },
-    {
-      "sectionTitle": "Prototypes"
-    },
-    {
-      "sectionTitle": "Feedback & Iteration"
-    },
-    {
-      "sectionTitle": "Final Solution"
-    },
-    {
-      "sectionTitle": "Conclusion"
+      "sectionTitle": "Background",
+      "subSections": []
     }
   ]
 }

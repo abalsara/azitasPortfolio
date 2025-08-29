@@ -1,7 +1,14 @@
 :root {
     --black: #191818;
     --gray: #787878;
-    --light-gray: #f7f7f7;
+    --light-gray: #FFF9F0;
+    --dark-green: #2F5D4B;
+    --light-green: #7DA88B;
+    --sand: #E9D8A6;
+    --cream: #FFF9F0;
+    --teal: #185264;
+    --brown: #3A2E28;
+    --coral: #ED9066; 
 }
 
 @font-face {
@@ -23,7 +30,7 @@ body {
 }
 
 .homepage {
-    background-color: white;
+    background-color: var(--dark-green);
     font-family: Montserrat;
     color: var(--black);
     line-height: 1.6;
@@ -41,20 +48,32 @@ body {
 
 header {
     padding: 1rem 0;
-    background-color: white;
+    background-color: #2F5D4B;
+    color: #F7F5F2;
 }
 
 header .nav-link {
-    color: var(--black);
+    color: #F7F5F2;
     /* font-weight: 500; */
     text-decoration: underline;
     text-underline-offset: 4px;
     font-size: 0.8rem;
 }
 
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sticky-header.hidden {
+  transform: translateY(-100%);
+}
+
 .wordmark {
     text-decoration: none;
-    color: var(--black)
+    color: #F7F5F2;
 }
 
 .wordmark-name {
@@ -69,29 +88,28 @@ header .nav-link {
 /* Hero section */
 .hero-section {
     padding: 4rem 0;
+    background: #2F5D4B;
+    color: #FFF9F0;
 }
 
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 2rem;
+    margin-left: 0; /* remove left margin */
 }
-
 .hero-title {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--black);
-    margin-left: 4rem;
+    margin-left: 10rem;
 }
 
 .hero-description {
-    margin-left: 4rem;
+    margin-left: 10rem;
     font-size: 1rem;
     line-height: 1.7;
-    color: var(--black);
     margin-right: 2rem;
 }
 
@@ -113,6 +131,7 @@ header .nav-link {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 2rem;
     height: 100%;
+    background-color: #FFF9F0;
 }
 
 .project-card:hover {
@@ -128,8 +147,69 @@ header .nav-link {
 
 /* Footer */
 footer {
-    background-color: white;
-    margin: 2rem;
+    padding: 2rem 0; /* increased vertical padding */
+    background-color: #2F5D4B;
+    font-size: 0.8rem;
+}
+
+.footer-left {
+    color: #FFF9F0;
+    font-weight: 700; /* bold for left text */
+}
+
+.footer-link {
+    color: #FFF9F0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Call To Action */
+.cta-section {
+    padding: 10rem 1rem;
+    background: var(--dark-green);
+    color: white;
+    text-align: center;
+}
+
+.cta-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-heading:hover {
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.cta-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-link {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.cta-buttons .cta-button {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--black);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .cta-button:hover {
+    background-color: #333;
 }
 
 .project-tags {

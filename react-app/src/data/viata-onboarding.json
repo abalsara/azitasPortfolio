@@ -3,39 +3,43 @@
   "title": "Increasing User Retention Through a Smarter Onboarding Experience",
   "subtitle": "Updating Viata's onboarding form to support customization and reduce drop-off",
   "tags": "UX / Research / Web Design",
-  "img": "/img/ViataOnboardingCover-Purple.png",
+  "img": "/img/Onboarding-Cover.png",
   "infoTable": [
-    { "label": "Position", "value": "UX Design Internship at Viata" },
-    { "label": "Sector", "value": "Startup, Event Planning, Travel Tech" },
+    {
+      "label": "Position",
+      "value": "UX Design Internship at [Viata](https://viata.ai/)"
+    },
+    {
+      "label": "Sector",
+      "value": "Startup, Event Planning, Travel Tech"
+    },
     {
       "label": "My Role",
-      "value": "Research, Wireframing, Interface Design, Development"
+      "value": "Entire product design from research to conception, visualization and testing (OR Research, Wireframing, Interface Design, Development)"
     },
-    { "label": "Project Duration", "value": "4 weeks (May 2025)" }
+    {
+      "label": "Project Duration",
+      "value": "4 weeks (May 2025)"
+    }
   ],
   "sections": [
     {
       "sectionTitle": "Background",
       "subSections": [
         {
-          "subtitle": "Product",
+          "subtitle": "Product & Challenge",
           "content": [
             {
               "type": "paragraph",
-              "text": "Viata is a Seattle-based travel tech startup that helps event organizers create custom, interactive event maps for their attendees. These maps showcase venues, hotels, local attractions, and points of interest — making it easier for attendees to navigate and explore the event area."
-            }
-          ]
-        },
-        {
-          "subtitle": "Challenge",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "My primary task was to redesign one of Viata's onboarding form, used by event organizers to input essential event details. This form powers the back end of the map-building process."
+              "text": "Viata is a travel tech startup that helps event organizers create interactive maps for their events. These maps highlight venues, hotels, and local attractions to help attendees explore and navigate their surroundings."
             },
             {
               "type": "paragraph",
-              "text": "The redesign brief was loosely defined — “improve usability and aesthetics” — leaving the core problem framing up to me. I had to identify usability issues, propose improvements, and ensure the new design aligned with the product's evolving visual direction."
+              "text": "A key part of this process is the onboarding form — a multi-step flow that guides organizers through customizing their event map by selecting locations and tailoring details to their event. I was tasked with redesigning this form with the broad goal of improving usability and aesthetics"
+            },
+            {
+              "type": "paragraph",
+              "text": "It was up to me to identify key usability issues, clarify the form's purpose, and propose design solutions that would align with the evolving product vision."
             }
           ]
         },
@@ -44,14 +48,26 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "As with many early-stage startup projects, several real-world limitations shaped the approach:"
+              "text": "Several real-world limitations shaped my approach to the redesign:"
             },
             {
-              "type": "bulletedList",
-              "bullets": [
-                "Tight Timelines: The onboarding redesign was part of a larger product release, meaning timelines were tight and scope had to remain focused",
-                "Startup Realities: With limited team size, budget, and access to users, research and testing had to be creative and scrappy.",
-                "No Design Mentor / First UX Role: This was my first professional design experience, and I navigated the process independently —  framing the problem, conducting research, iterating designs, and making strategic decisions as I went"
+              "type": "cardList",
+              "cards": [
+                {
+                  "label": "Constraint #1",
+                  "title": "Tight Timelines",
+                  "body": "The onboarding form needed to be updated in time for a product launch just four weeks away. This meant the scope had to stay focused and decisions had to be made quickly."
+                },
+                {
+                  "label": "Constraint #2",
+                  "title": "Startup Realities",
+                  "body": "With limited team size, budget, and access to users, research and testing had to be creative and scrappy."
+                },
+                {
+                  "label": "Constraint #3",
+                  "title": "No Design Mentor",
+                  "body": "As the only designer on a small team, I had no dedicated design mentor. I navigated the UX process independently — framing the problem, conducting research, exploring solutions, and collaborating directly with developers."
+                }
               ]
             }
           ]
@@ -59,20 +75,78 @@
       ]
     },
     {
-      "sectionTitle": "Research & Ideation",
+      "sectionTitle": "Research",
       "subSections": [
         {
           "subtitle": "Approach",
           "content": [
             {
               "type": "paragraph",
-              "text": "todo"
+              "text": "Given limited time and access to users, I used a combination of direct and indirect research methods to understand usability issues and opportunities within the onboarding form:"
+            },
+            {
+              "type": "cardList",
+              "cards": [
+                {
+                  "label": "Method #1",
+                  "title": "Heuristic Evaluation",
+                  "body": "I conducted a thorough Heuristic Evaluation of the onboarding form, applying [Jakob Nielsen's heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) to identify issues related to consistency, feedback, navigation, and error prevention."
+                },
+                {
+                  "label": "Method #2",
+                  "title": "User Feedback",
+                  "body": "I drew on insights from my manager's conversations with event organizers, which revealed requests for more customization and additional features in the onboarding form."
+                },
+                {
+                  "label": "Method #3",
+                  "title": "Best Practices Research",
+                  "body": "I reviewed onboarding best practices from leading companies via [Growth.Design case studies](https://growth.design/case-studies) to identify patterns that improve clarity, engagement, and retention."
+                },
+                {
+                  "label": "Method #4",
+                  "title": "Session Replays",
+                  "body": "I analyzed user session recordings to observe behavior during onboarding. While this helped identify where users hesitated or struggled, it didn't provide insight into why they behaved that way, limiting its impact on uncovering root causes."
+                }
+              ]
             }
           ]
         },
         {
-          "subtitle": "Old Form",
+          "subtitle": "Findings",
           "content": [
+            {
+              "type": "paragraph",
+              "text": "My research revealed key insights about the onboarding form:"
+            },
+            {
+              "type": "cardList",
+              "cards": [
+                {
+                  "label": "Finding #1",
+                  "title": "Users Desired More Customization",
+                  "body": "Event organizers wanted greater control over their maps, including options to customize hotels and map appearance."
+                },
+                {
+                  "label": "Finding #2",
+                  "title": "Inconsistent Design Patterns Across Steps",
+                  "body": "The form's interface behaved differently depending on the type of location, leading to confusion and a fragmented experience."
+                },
+                {
+                  "label": "Finding #3",
+                  "title": "Aesthetic Shortcomings",
+                  "body": "The form's visual design felt outdated and didn't align with the product's vision for a modern, engaging experience."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subtitle": "Original Form",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Below is a walkthrough of the original onboarding form. I've annotated the screenshots to highlight usability issues and pain points uncovered during research."
+            },
             {
               "type": "imageCarousel",
               "imgUrls": [
@@ -84,57 +158,130 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Ideation & Wireframes",
+      "subSections": [
         {
-          "subtitle": "Findings",
+          "subtitle": "",
           "content": [
             {
               "type": "paragraph",
-              "text": "todo"
+              "text": "Before jumping into high-fidelity design, I explored wireframes to experiment with structure, flow, and layout. At this stage, my goal wasn't to lock in detailed solutions — but to test ways the onboarding form could better support added features, improve clarity, and feel more cohesive."
             },
             {
-              "type": "bulletedList",
-              "bullets": ["todo", "todo", "todo"]
-            },
-            {
-              "type": "paragraph",
-              "text": "todo"
-            }
-          ]
-        },
-        {
-          "subtitle": "Framing the Challenge",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "todo"
-            },
-            {
-              "type": "bulletedList",
-              "bullets": ["todo", "todo", "todo"]
+              "type": "imageCarousel",
+              "imgUrls": [
+                "/img/Wireframe-1.png",
+                "/img/Wireframe-2.png",
+                "/img/Wireframe-3.png",
+                "/img/Wireframe-4.png",
+                "/img/Wireframe-5.png"
+              ]
             },
             {
               "type": "paragraph",
-              "text": "todo"
+              "text": "These wireframes explored ways to better organize the form and prepare it for new features like hotel customization and live map previews. They also revealed key challenges around simplifying and unifying the user experience that guided the prototyping phase. Based on these insights, I defined the key design challenges to focus on in the next phase:"
+            },
+            {
+              "type": "cardList",
+              "cards": [
+                {
+                  "label": "Challenge #1",
+                  "title": "Customization vs. Complexity",
+                  "body": "Giving users more control without overwhelming them is challenging, especially in the hotels step, where too many options can confuse rather than help."
+                },
+                {
+                  "label": "Challenge #2",
+                  "title": "Consistency Across Steps",
+                  "body": "Different location types require different behaviors, but inconsistent patterns across steps can confuse users and break the unified experience."
+                },
+                {
+                  "label": "Challenge #3",
+                  "title": "Clarity and Navigation",
+                  "body": "Users need clear guidance on where they are in the process and how to move forward or back, ensuring smooth navigation throughout the flow."
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "sectionTitle": "Wireframes"
+      "sectionTitle": "Prototype",
+      "subSections": [
+        {
+          "subtitle": "",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "explain my react prototype (todo)"
+            },
+            {
+              "type": "imageCarousel",
+              "imgUrls": [
+                "/img/Prototype1.png",
+                "/img/Prototype2.png",
+                "/img/Prototype3.png",
+                "/img/Prototype4.png",
+                "/img/Prototype5.png",
+                "/img/Prototype6.png",
+                "/img/Prototype7.png",
+                "/img/Prototype8.png",
+                "/img/Prototype9.png",
+                "/img/Prototype10.png",
+                "/img/Prototype11.png",
+                "/img/Prototype12.png",
+                "/img/Prototype13.png",
+                "/img/Prototype14.png"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "link to demo video via Loom (todo)."
+            }
+          ]
+        }
+      ]
     },
     {
-      "sectionTitle": "Prototypes"
+      "sectionTitle": "Feedback & Iteration",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "explain the feedback recieved / testing done & final changes to form (todo)"
+        }
+      ]
     },
     {
-      "sectionTitle": "Feedback & Iteration"
-    },
-    {
-      "sectionTitle": "Final Solution"
+      "sectionTitle": "Final Solution",
+      "subSections": [
+        {
+          "subtitle": "",
+          "content": [
+            {
+              "type": "imageCarousel",
+              "imgUrls": [
+                "/img/NewForm1.png",
+                "/img/NewForm2.png",
+                "/img/NewForm3.png",
+                "/img/NewForm4.png",
+                "/img/NewForm5.png",
+                "/img/NewForm6.png",
+                "/img/NewForm7.png"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "sectionTitle": "Conclusion"
+    },
+    {
+      "sectionTitle": "Acknowledgements"
     }
   ]
 }

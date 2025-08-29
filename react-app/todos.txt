@@ -1,9 +1,35 @@
-- setup firebase hosting for this app (AT HOME) 
-    - npm run build
-    - firebase deploy
-- take down gh-pages hosting for my html mockup
-- design footer (Linkedin, Email, )
-- use consistent naming (change everything to either Projects, or Case Studies)
-- add accessibility to website 
-    - add alt text to images
-- add content to gallery page
+TEXT (Friday)
+- Option 1
+    - explanation of changes made in the hotels step / vs what stayed the same
+    - annotated screenshots 
+    - video demo hotels step 
+- Option 2
+    - annotated screenshots of Navigation, Consistency across adding locations
+    - Complexity: video demo of hotels step
+    - overall improvements (touch on aesthetics)
+- feedback & iteration (rename section?)
+    - 
+- final solution
+    - explain improvements made
+    - explain my contribution
+- conclusion
+- acknowledgements
+
+CONTENT (Saturday & Sunday)
+- Original Form - make content full length
+- Original Form - add annotations
+- New Form - make content full length
+- New Form - add annotations
+- Pragmatic Form - Annotated Screenshots of Changes to Hotels Step
+- Ambitious Form - Annotated Screenshots of Navigation
+- Ambitious Form - Annotated Screenshots of Consistency Across Steps
+- Pragmatic Form - Video Demo of Hotels Step
+- Ambitious Form - Video Demo of Hotels Step
+
+Other improvements
+- better explain the hotels problem in wireframe/ideation
+- better explain the inconsistency in adding locations to the map
+- explain how the Pragmatic/Ambitious approach allowed us to define an MVP and address the most pressing problems first, 
+and then with any additional time, we could take inspiration from the future form!
+- REFLECTION: could have been more useful to do X prototyping rather than iterative 
+    - to not box me into one solution (I got stuck for a while on iteration 1)
